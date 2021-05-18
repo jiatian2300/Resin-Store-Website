@@ -1,0 +1,266 @@
+$pri-colour: #6D87A8;
+$sec-colour: #E6C5A9;
+$cream: #FFF8F5;
+$light-blue: #D2DFF0;
+$header-blue: #475E7B;
+$text-blue: #354356;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+body {
+    background-color: $pri-colour;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    color: white;
+    font-size: 3em;
+}
+
+h2 {
+    color: $header-blue;
+    font-family: 'Playfair Display';
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 0.2em 0;
+}
+
+h3 {
+    color: $header-blue;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 1.6em;
+    margin: 0 0 2.5em;
+    position: relative;
+    z-index: 1;
+}
+
+h3::before {
+    content: ' ';
+    position: absolute;
+    width: 5em;
+    height: 0.4em;
+    background: $sec-colour;
+    top: 2.1em;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hero {
+
+    span {
+        color: $sec-colour;
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: relative;
+        margin-top: 1em;
+        height: auto;
+        width: 100%;
+        padding: 0;
+
+        a {
+            display: flex;
+            //box-shadow: ;
+
+            img{
+                width: 4em;
+                height: 3.8em;
+                margin: 1em;
+                margin-left: 2em;
+            }
+            
+            p {
+                font-weight: bold;
+                margin-top: 1.3em;
+                font-size: 1.5em;
+            }
+        }
+
+        .icons {
+            display: flex;
+            margin-right: 2em;
+            margin-top: 0.5em;
+            img{
+                width: 2.6em;
+                height: 2.6em;
+                margin: 1em;
+            }
+        }
+    }
+
+    .container {
+        .logo {
+            display: none;
+        }
+
+        .cta{
+            text-align: center;
+
+            a{
+                background-color: white;
+                color: $header-blue;
+                border-radius: 5em;
+                padding: 0 1em;
+                margin: 0 auto 5em;
+                display: flex;
+                width: fit-content;
+                font-weight: bold;
+            }
+            
+            img {
+                vertical-align: middle;
+                height: 1.5em;
+                width: 1.5em;
+                margin-right: 1em;
+                margin-top: 16px;
+                margin-left: 0.2em;
+            }
+        }
+    }
+}
+
+.about {
+    background-color: $cream;
+    padding: 3em;
+    padding-top: 5em;
+    p {
+        text-align: center;
+    }
+
+    ::selection{
+        background: $sec-colour;
+    }
+}
+
+.bottom {
+    span {
+        font-weight: bold;
+    }
+
+    p {
+        margin: 2em 0 3em;
+    }
+}
+
+.forms {
+    background-color: $light-blue;
+    padding: 3em;
+    padding-top: 5em;
+
+    p {
+        text-align: center;
+    }
+
+    header {
+        margin-bottom: 5em;
+        text-align: right;
+    }
+
+    span{
+        display: block;
+    }
+
+    h3::before {
+        right:0;
+    }
+
+    a{
+        display: flex;
+    }
+
+    ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+        grid-gap: 1em;
+        padding: 0;
+    }
+
+    li{
+        background: white;
+        margin: 0.5em;
+        padding: 1em;
+        border-radius: 35px;
+
+        a {
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+
+        p{
+            align-self: center;
+            justify-self: center;
+            font-family: 'Playfair';
+            font-size: 1.8em;
+            font-weight: bold;
+            color: $pri-colour;
+            margin:0;
+            width: fit-content;
+            padding: 0 0.3em;
+            padding-bottom: 0.5em;
+            border-bottom: 3px solid;
+        }
+
+        img{
+            height: 7em;
+            width: 7em;
+            margin: 0.5em 0.8em;
+        }
+    }
+
+    .blue{
+        background: $pri-colour;
+        p{
+            color: white;
+        }
+    }
+}
+
+.note {
+    background-color: $cream;
+    padding: 3em;
+    padding-top: 5em;
+
+    h3 {
+        margin-top: -2em;
+        margin-bottom: 4.3em;
+    }
+
+    ul {
+        margin: 1em;
+    }
+    
+    li {
+        font-size: 1.2em;
+    }
+    
+    strong {
+        margin: 1em;
+        font-family: 'Playfair';
+        font-size: 1.5em;
+        color: $header-blue;
+    }
+
+}

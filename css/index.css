@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap");
+body {
+  background-color: #6D87A8;
+  font-family: 'Raleway';
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-family: 'Playfair Display';
+  color: white;
+  font-size: 3em;
+}
+
+h2 {
+  color: #475E7B;
+  font-family: 'Playfair Display';
+  font-size: 2.8em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+h3 {
+  color: #475E7B;
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  font-size: 1.6em;
+  margin: 0 0 2.5em;
+  position: relative;
+  z-index: 1;
+}
+
+h3::before {
+  content: ' ';
+  position: absolute;
+  width: 5em;
+  height: 0.4em;
+  background: #E6C5A9;
+  top: 2.1em;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero span {
+  color: #E6C5A9;
+  display: block;
+}
+
+.hero .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: none;
+  position: relative;
+  margin-top: 1em;
+  height: auto;
+  width: 100%;
+  padding: 0;
+}
+
+.hero .navbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .navbar a img {
+  width: 4em;
+  height: 3.8em;
+  margin: 1em;
+  margin-left: 2em;
+}
+
+.hero .navbar a p {
+  font-weight: bold;
+  margin-top: 1.3em;
+  font-size: 1.5em;
+}
+
+.hero .navbar .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2em;
+  margin-top: 0.5em;
+}
+
+.hero .navbar .icons img {
+  width: 2.6em;
+  height: 2.6em;
+  margin: 1em;
+}
+
+.hero .container .logo {
+  display: none;
+}
+
+.hero .container .cta {
+  text-align: center;
+}
+
+.hero .container .cta a {
+  background-color: white;
+  color: #475E7B;
+  border-radius: 5em;
+  padding: 0 1em;
+  margin: 0 auto 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.hero .container .cta img {
+  vertical-align: middle;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1em;
+  margin-top: 16px;
+  margin-left: 0.2em;
+}
+
+.about {
+  background-color: #FFF8F5;
+  padding: 3em;
+  padding-top: 5em;
+}
+
+.about p {
+  text-align: center;
+}
+
+.about ::-moz-selection {
+  background: #E6C5A9;
+}
+
+.about ::selection {
+  background: #E6C5A9;
+}
+
+.bottom span {
+  font-weight: bold;
+}
+
+.bottom p {
+  margin: 2em 0 3em;
+}
+
+.forms {
+  background-color: #D2DFF0;
+  padding: 3em;
+  padding-top: 5em;
+}
+
+.forms p {
+  text-align: center;
+}
+
+.forms header {
+  margin-bottom: 5em;
+  text-align: right;
+}
+
+.forms span {
+  display: block;
+}
+
+.forms h3::before {
+  right: 0;
+}
+
+.forms a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.forms ul {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(340px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 1em;
+  padding: 0;
+}
+
+.forms li {
+  background: white;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 35px;
+}
+
+.forms li a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.forms li p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: 'Playfair';
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #6D87A8;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 0.3em;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid;
+}
+
+.forms li img {
+  height: 7em;
+  width: 7em;
+  margin: 0.5em 0.8em;
+}
+
+.forms .blue {
+  background: #6D87A8;
+}
+
+.forms .blue p {
+  color: white;
+}
+
+.note {
+  background-color: #FFF8F5;
+  padding: 3em;
+  padding-top: 5em;
+}
+
+.note h3 {
+  margin-top: -2em;
+  margin-bottom: 4.3em;
+}
+
+.note ul {
+  margin: 1em;
+}
+
+.note li {
+  font-size: 1.2em;
+}
+
+.note strong {
+  margin: 1em;
+  font-family: 'Playfair';
+  font-size: 1.5em;
+  color: #475E7B;
+}
+/*# sourceMappingURL=index.css.map */
