@@ -140,10 +140,20 @@ html {
   margin-left: 0.2em;
 }
 
+.wave {
+  -webkit-filter: drop-shadow(0 10px 5px rgba(22, 18, 78, 0.2));
+          filter: drop-shadow(0 10px 5px rgba(22, 18, 78, 0.2));
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1em;
+}
+
+.wave path {
+  fill: #6D87A8;
+}
+
 .about {
   background-color: #FFF8F5;
-  padding: 3em;
-  padding-top: 5em;
 }
 
 .about p {
@@ -156,6 +166,10 @@ html {
 
 .about ::selection {
   background: #E6C5A9;
+}
+
+.top, .bottom {
+  padding: 0 3em;
 }
 
 .bottom span {

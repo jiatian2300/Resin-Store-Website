@@ -64,7 +64,6 @@ html{
 }
 
 .hero {
-
     span {
         color: $sec-colour;
         display: block;
@@ -139,12 +138,23 @@ html{
             }
         }
     }
+    
+    
+}
+
+.wave {
+    filter: drop-shadow(
+        0 10px 5px rgba(22, 18, 78, 0.2));
+    width: 100%;
+    overflow: hidden;
+    margin-top: -1em;
+    path{
+        fill: $pri-colour;
+    }
 }
 
 .about {
     background-color: $cream;
-    padding: 3em;
-    padding-top: 5em;
     p {
         text-align: center;
     }
@@ -152,6 +162,10 @@ html{
     ::selection{
         background: $sec-colour;
     }
+}
+
+.top, .bottom {
+    padding: 0 3em;
 }
 
 .bottom {
