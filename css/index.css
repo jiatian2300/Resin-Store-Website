@@ -35,11 +35,11 @@ h3 {
   z-index: 1;
 }
 
-h3::before {
+h3::before, .note h2::before {
   content: ' ';
   position: absolute;
-  width: 5em;
-  height: 0.4em;
+  width: 5rem;
+  height: 0.4rem;
   background: #E6C5A9;
   top: 2.1em;
   z-index: -1;
@@ -108,6 +108,10 @@ html {
   margin: 1em;
 }
 
+.hero .container {
+  margin-bottom: 10em;
+}
+
 .hero .container .logo {
   display: none;
 }
@@ -142,8 +146,8 @@ html {
 
 .about {
   background-color: #FFF8F5;
-  padding: 3em;
   padding-top: 5em;
+  padding-bottom: 10em;
 }
 
 .about p {
@@ -158,6 +162,22 @@ html {
   background: #E6C5A9;
 }
 
+.top, .bottom {
+  padding: 0 3em;
+}
+
+.wave {
+  -webkit-filter: drop-shadow(0 0 10px black);
+          filter: drop-shadow(0 0 10px black);
+  margin: -110px auto 0;
+  display: block;
+  width: 100%;
+}
+
+.top {
+  margin: 2em auto;
+}
+
 .bottom span {
   font-weight: bold;
 }
@@ -168,8 +188,11 @@ html {
 
 .forms {
   background-color: #D2DFF0;
-  padding: 3em;
   padding-top: 5em;
+}
+
+.forms header, .forms ul {
+  padding: 3em;
 }
 
 .forms p {
@@ -177,15 +200,17 @@ html {
 }
 
 .forms header {
-  margin-bottom: 5em;
+  background-color: #D2DFF0;
+  margin-top: -3em;
   text-align: right;
+  padding-top: 0;
 }
 
 .forms span {
   display: block;
 }
 
-.forms h3::before {
+.forms h3::before, .forms .note h2::before, .note .forms h2::before {
   right: 0;
 }
 
@@ -202,7 +227,8 @@ html {
   -ms-grid-columns: (minmax(340px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 1em;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 10em;
 }
 
 .forms li {
@@ -215,8 +241,8 @@ html {
 .forms li a {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
 }
 
 .forms li p {
@@ -254,17 +280,24 @@ html {
 
 .note {
   background-color: #FFF8F5;
-  padding: 3em;
-  padding-top: 5em;
+  border: #FFF8F5 2px solid;
+  padding-top: 2em;
+  position: relative;
 }
 
-.note h3 {
-  margin-top: -2em;
-  margin-bottom: 4.3em;
+.note .wave {
+  overflow: hidden;
+}
+
+.note h2 {
+  background-color: #FFF8F5;
+  padding: 0 1em;
+  border: red 3px solid;
 }
 
 .note ul {
-  margin: 1em;
+  padding: 3em;
+  border: red 3px solid;
 }
 
 .note li {
@@ -274,7 +307,7 @@ html {
 .note strong {
   margin: 1em;
   font-family: 'Playfair';
-  font-size: 1.5em;
+  font-size: 2em;
   color: #475E7B;
 }
 /*# sourceMappingURL=index.css.map */

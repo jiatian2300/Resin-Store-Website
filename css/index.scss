@@ -46,8 +46,8 @@ h3 {
 h3::before {
     content: ' ';
     position: absolute;
-    width: 5em;
-    height: 0.4em;
+    width: 5rem;
+    height: 0.4rem;
     background: $sec-colour;
     top: 2.1em;
     z-index: -1;
@@ -111,6 +111,9 @@ html{
     }
 
     .container {
+
+        margin-bottom: 10em;
+
         .logo {
             display: none;
         }
@@ -143,8 +146,9 @@ html{
 
 .about {
     background-color: $cream;
-    padding: 3em;
     padding-top: 5em;
+    padding-bottom: 10em;
+
     p {
         text-align: center;
     }
@@ -152,6 +156,22 @@ html{
     ::selection{
         background: $sec-colour;
     }
+}
+
+.top, .bottom{
+    padding: 0 3em;
+}
+
+.wave{
+    //box-shadow: inset 1px 7px 20px -7px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+    margin: -110px auto 0;
+    display: block;
+    width: 100%;
+}
+
+.top {
+    margin: 2em auto;
 }
 
 .bottom {
@@ -166,16 +186,21 @@ html{
 
 .forms {
     background-color: $light-blue;
-    padding: 3em;
     padding-top: 5em;
+
+    header, ul{
+        padding: 3em;
+    }
 
     p {
         text-align: center;
     }
 
     header {
-        margin-bottom: 5em;
+        background-color: $light-blue;
+        margin-top: -3em;
         text-align: right;
+        padding-top: 0;
     }
 
     span{
@@ -188,6 +213,7 @@ html{
 
     a{
         display: flex;
+
     }
 
     ul{
@@ -195,7 +221,8 @@ html{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
         grid-gap: 1em;
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 10em;
     }
 
     li{
@@ -206,7 +233,7 @@ html{
 
         a {
             display: grid;
-            grid-template-columns: 30% 70%;
+            grid-template-columns: 1fr 3fr;
         }
 
         p{
@@ -240,16 +267,27 @@ html{
 
 .note {
     background-color: $cream;
-    padding: 3em;
-    padding-top: 5em;
+    border: $cream 2px solid;
+    padding-top: 2em;
+    position: relative;
 
-    h3 {
-        margin-top: -2em;
-        margin-bottom: 4.3em;
+    .wave {
+        overflow: hidden;
+    }
+
+    h2 {
+        background-color: $cream;
+        padding: 0 1em;
+        border: red 3px solid;
+    }
+
+    h2::before {
+        @extend h3::before;
     }
 
     ul {
-        margin: 1em;
+        padding: 3em;
+        border: red 3px solid;
     }
     
     li {
@@ -259,7 +297,7 @@ html{
     strong {
         margin: 1em;
         font-family: 'Playfair';
-        font-size: 1.5em;
+        font-size: 2em;
         color: $header-blue;
     }
 
