@@ -5,22 +5,24 @@ body {
   margin: 0;
   padding: 0;
   font-size: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 h1 {
   font-family: 'Playfair Display';
   color: white;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
   color: #475E7B;
   font-family: 'Playfair Display';
-  font-size: 2.8em;
+  font-size: 2.8rem;
   font-weight: bold;
   margin: 0.2em 0;
 }
@@ -29,7 +31,7 @@ h3 {
   color: #475E7B;
   font-family: 'Playfair Display';
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   margin: 0 0 2.5em;
   position: relative;
   z-index: 1;
@@ -92,6 +94,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero .navbar a img {
@@ -103,8 +108,8 @@ html {
 
 .hero .navbar a p {
   font-weight: bold;
-  margin-top: 1.3em;
-  font-size: 1.5em;
+  margin-top: 1em;
+  font-size: 1.5rem;
 }
 
 .hero .navbar .icons {
@@ -119,6 +124,8 @@ html {
   width: 2.6em;
   height: 2.6em;
   margin: 1em;
+  -webkit-filter: drop-shadow(3px 5px 2px rgba(12, 10, 37, 0.2));
+          filter: drop-shadow(3px 5px 2px rgba(12, 10, 37, 0.2));
 }
 
 .hero .container {
@@ -137,24 +144,37 @@ html {
   background-color: white;
   color: #475E7B;
   border-radius: 5em;
-  padding: 0 1em;
+  padding: 0 2em;
   margin: 0 auto 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
+  -webkit-box-shadow: 1px 1px 1px rgba(53, 67, 86, 0.5), 2px 2px 2px rgba(53, 67, 86, 0.4), 4px 4px 4px rgba(53, 67, 86, 0.3), 8px 8px 10px rgba(53, 67, 86, 0.2);
+          box-shadow: 1px 1px 1px rgba(53, 67, 86, 0.5), 2px 2px 2px rgba(53, 67, 86, 0.4), 4px 4px 4px rgba(53, 67, 86, 0.3), 8px 8px 10px rgba(53, 67, 86, 0.2);
 }
 
-.hero .container .cta img {
-  vertical-align: middle;
-  height: 1.5em;
-  width: 1.5em;
-  margin-right: 1em;
-  margin-top: 16px;
-  margin-left: 0.2em;
+.hero .container .cta a:hover {
+  background-color: #f0e7e0;
+}
+
+.hero .container .cta p::before {
+  color: #475E7B;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f56b";
+  margin-right: 0.7rem;
 }
 
 .about {
@@ -235,13 +255,15 @@ html {
   margin: 0.5em;
   padding: 1em;
   border-radius: 35px;
+  -webkit-box-shadow: 1px 1px 2px rgba(53, 67, 86, 0.3), 2px 2px 3px rgba(53, 67, 86, 0.3), 4px 4px 5px rgba(53, 67, 86, 0.3), 8px 8px 10px rgba(53, 67, 86, 0.2);
+          box-shadow: 1px 1px 2px rgba(53, 67, 86, 0.3), 2px 2px 3px rgba(53, 67, 86, 0.3), 4px 4px 5px rgba(53, 67, 86, 0.3), 8px 8px 10px rgba(53, 67, 86, 0.2);
 }
 
 .forms li a {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
+  -ms-grid-columns: 10em auto;
+      grid-template-columns: 10em auto;
 }
 
 .forms li p {
@@ -251,7 +273,7 @@ html {
   -ms-grid-column-align: center;
       justify-self: center;
   font-family: 'Playfair';
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #6D87A8;
   margin: 0;
@@ -259,7 +281,7 @@ html {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0 0.3em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.4em;
   border-bottom: 3px solid;
 }
 
@@ -299,13 +321,20 @@ html {
 }
 
 .note li {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .note strong {
-  margin: 1em;
+  display: block;
+  margin: 1em 0;
   font-family: 'Playfair';
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #475E7B;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
