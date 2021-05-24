@@ -5,7 +5,9 @@ $light-blue: #D2DFF0;
 $header-blue: #475E7B;
 $text-blue: #354356;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+$padding: 8%;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@400;700&display=swap');
 
 body {
     background-color: $pri-colour;
@@ -14,10 +16,14 @@ body {
     padding: 0;
     font-size: 12px;
     box-sizing: border-box;
+
+    ::selection {
+        background: $sec-colour;
+    }
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 h1 {
@@ -30,7 +36,7 @@ h2 {
     color: $header-blue;
     font-family: 'Playfair Display';
     font-size: 2.8rem;
-    font-weight: bold;
+    font-weight: 900;
     margin: 0.2em 0;
 }
 
@@ -55,23 +61,23 @@ h3 {
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 .wave {
-    filter: drop-shadow(0 5px 2px rgba(12, 10, 37, 0.2))
-            drop-shadow(0 10px 5px rgba(22, 18, 78, 0.13));
+    filter: drop-shadow(0 5px 2px rgba(12, 10, 37, 0.2)) drop-shadow(0 10px 5px rgba(22, 18, 78, 0.13));
     width: 100%;
     overflow: hidden;
     margin-top: -1.3em;
     margin-bottom: -4em;
-    path{
+
+    path {
         fill: $pri-colour;
     }
 }
@@ -87,7 +93,7 @@ html{
         justify-content: space-between;
         background: none;
         position: relative;
-        margin-top: 1em;
+        margin-top: 1rem;
         height: auto;
         width: 100%;
         padding: 0;
@@ -95,29 +101,30 @@ html{
         a {
             display: flex;
             align-items: center;
+            margin-left: $padding - 4%;
 
-            img{
-                width: 4em;
-                height: 3.8em;
+            img {
+                width: 4rem;
+                height: 3.8rem;
                 margin: 1em;
-                margin-left: 2em;
             }
-            
+
             p {
                 font-weight: bold;
                 margin-top: 1em;
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
         }
 
         .icons {
             display: flex;
-            margin-right: 2em;
+            margin-right: $padding;
             margin-top: 0.5em;
-            img{
-                width: 2.6em;
-                height: 2.6em;
-                margin: 1em;
+
+            img {
+                width: 2.6rem;
+                height: 2.6rem;
+                margin: 0.8em;
 
                 filter: drop-shadow(3px 5px 2px rgba(12, 10, 37, 0.2))
             }
@@ -125,77 +132,86 @@ html{
     }
 
     .container {
-        margin-top: 5em;
+        margin: 6em 0;
 
         .logo {
             display: none;
         }
 
-        .cta{
+        .cta {
             text-align: center;
 
-            a{
+            h1 {
+                margin: 0 0 .8em;
+            }
+
+            a {
                 background-color: white;
                 color: $header-blue;
                 border-radius: 5em;
                 padding: 0 2em;
-                margin: 0 auto 5em;
+                margin: auto;
                 display: flex;
                 align-items: center;
                 width: fit-content;
                 font-weight: bold;
-                box-shadow: 1px 1px 1px rgba(#354356, 0.5), 
-                            2px 2px 2px rgba(#354356, 0.4), 
-                            4px 4px 4px rgba(#354356, 0.3), 
-                            8px 8px 10px rgba(#354356, 0.2);
+                box-shadow: 1px 1px 1px rgba(#354356, 0.5),
+                    2px 2px 2px rgba(#354356, 0.4),
+                    4px 4px 4px rgba(#354356, 0.3),
+                    8px 8px 10px rgba(#354356, 0.2);
+                transition: background 300ms ease-in-out;
             }
 
-            a:hover {
-                background-color: #f0e7e0;
-            }
-
-            p::before{
+            p::before {
                 color: $header-blue;
                 display: inline-block;
                 font-style: normal;
                 font-variant: normal;
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
-                font-family: "Font Awesome 5 Free"; 
+                font-family: "Font Awesome 5 Free";
                 font-weight: 700;
-                content: "\f56b";
+                content: "\f291";
                 margin-right: 0.7rem;
+                transition: color 300ms ease-in-out;
+            }
+
+            a:hover {
+                background: $header-blue;
+                color: white;
+
+                p::before {
+                    color: white;
+                }
             }
         }
     }
-    
-    
+
+
 }
 
 
 .about {
     background-color: $cream;
     padding-bottom: 5em;
+
     p {
         text-align: center;
     }
 
-    ::selection{
-        background: $sec-colour;
-    }
-}
-
-.top, .bottom {
-    padding: 0 3em;
-}
-
-.bottom {
-    span {
-        font-weight: bold;
+    .top,
+    .bottom {
+        padding: 0 $padding;
     }
 
-    p {
-        margin: 2em 0 3em;
+    .bottom {
+        span {
+            font-weight: bold;
+        }
+
+        p {
+            margin: 2em 0 3em;
+        }
     }
 }
 
@@ -203,82 +219,87 @@ html{
     background-color: $light-blue;
     padding-bottom: 5em;
 
-    .wave{
-        path{
+    .wave {
+        path {
             fill: $cream;
         }
-    }
-
-    p {
-        text-align: center;
     }
 
     header {
         margin-bottom: 5em;
         margin-top: -3em;
         text-align: right;
-        padding: 0 3em;
+        padding: 0 $padding;
     }
 
-    span{
+    span {
         display: block;
     }
 
     h3::before {
-        right:0;
+        right: 0;
     }
 
-    a{
-        display: flex;
-    }
-
-    ul{
-        padding: 0 3em;
+    ul {
+        padding: 0 $padding;
         list-style-type: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         grid-gap: 1em;
     }
 
-    li{
+    li {
         background: white;
         margin: 0.5em;
         padding: 1em;
         border-radius: 35px;
-        box-shadow: 1px 1px 2px rgba(#354356, 0.3), 
-                    2px 2px 3px rgba(#354356, 0.3), 
-                    4px 4px 5px rgba(#354356, 0.3), 
-                    8px 8px 10px rgba(#354356, 0.2);
+        transition: background 200ms ease-in-out;
+        box-shadow: 1px 1px 2px rgba(#354356, 0.3),
+            2px 2px 3px rgba(#354356, 0.3),
+            4px 4px 5px rgba(#354356, 0.3),
+            8px 8px 10px rgba(#354356, 0.2),
+            10px 10px 15px rgba(#354356, 0.2);
 
         a {
             display: grid;
-            grid-template-columns: 10em auto;
+            grid-template-columns: 8em auto;
         }
 
-        p{
+        p {
+            text-align: center;
             align-self: center;
             justify-self: center;
             font-family: 'Playfair';
             font-size: 1.8rem;
             font-weight: bold;
             color: $pri-colour;
-            margin:0;
+            margin: 0;
             width: fit-content;
             padding: 0 0.3em;
             padding-bottom: 0.4em;
             border-bottom: 3px solid;
+            transition: color 200ms ease-in-out;
         }
 
-        img{
+        img {
             height: 7em;
             width: 7em;
-            margin: 0.5em 0.8em;
+            margin: auto;
+        }
+
+        &:hover {
+            background: $text-blue;
+
+            p {
+                color: $sec-colour;
+            }
         }
     }
 
-    .blue{
+    .blue {
         background: $pri-colour;
-        p{
+
+        p {
             color: white;
         }
     }
@@ -288,28 +309,29 @@ html{
     background-color: $cream;
     padding-bottom: 5em;
 
-    .wave{
-        path{
+    .wave {
+        path {
             fill: $light-blue;
         }
     }
 
-    .content, .header{
-        padding: 0 3em;
+    .content,
+    .header {
+        padding: 0 $padding;
     }
 
     .content {
         margin: 1em;
     }
 
-    .header{
-        margin-top: 5em;
+    .header {
+        margin-top: 4em;
     }
-    
+
     li {
         font-size: 1.2rem;
     }
-    
+
     strong {
         display: block;
         margin: 1em 0;
@@ -321,8 +343,105 @@ html{
 }
 
 @media only screen and (min-width: 768px) {
-    body{
+    html, .body {
+        font-size: 16px;
+    }
+
+    forms ul {
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    html, body {
+        font-size: 16px;
+    }
+
+    .forms ul {
+        p {
+            font-size: 2.2rem;
+        }
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            width: 18rem;
+            height: 18rem;
+            margin-right: 4em;
+        }
+    }
+
+    .hero .navbar a {
+        .nav-logo {
+            display: none;
+        }
+        p {
+            margin-left: 3em;
+        }
+    }
+
+    .forms header{
+        text-align: left;
+        margin: 4em 0 3em;
+
+        h3::before {
+            left: 0;
+        }        
+    }
+
+    .forms ul {
+        grid-gap: 2em;
+    }
+
+    .forms ul li {
+        margin: 0em;
+
+        a {
+            grid-template-columns: auto;
+            grid-template-rows: 10em auto;
+    
+            p{
+                margin-bottom: 1em;
+            }
+    
+            img {
+                width: 7.5em;
+                height: 7.5em;
+            }
+        }
+    }
+
+    .note {
+        padding-bottom: 3em;
+    }
+
+    .note .content {
+        li{
+        font-size: 1.5rem;
+        }
+
+        strong {
+            font-size: 1.8rem;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 1450px) {
+
+    html, body {
         font-size: 20px;
     }
 
+    .hero .container .cta h1{
+        color: black;
+    }
 }
