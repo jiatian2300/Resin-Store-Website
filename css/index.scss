@@ -1,12 +1,4 @@
-$pri-colour: #6D87A8;
-$sec-colour: #E6C5A9;
-$cream: #FFF8F5;
-$light-blue: #D2DFF0;
-$header-blue: #475E7B;
-$text-blue: #354356;
-
-$padding: 8%;
-
+@import "./variables";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@400;700&display=swap');
 
 body {
@@ -14,7 +6,7 @@ body {
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 10px;
     box-sizing: border-box;
 
     ::selection {
@@ -57,7 +49,7 @@ h3 {
         background: $sec-colour;
         top: 2.1em;
         z-index: -1;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 }
 
@@ -74,8 +66,8 @@ html {
     filter: drop-shadow(0 5px 2px rgba(12, 10, 37, 0.2)) drop-shadow(0 10px 5px rgba(22, 18, 78, 0.13));
     width: 100%;
     overflow: hidden;
-    margin-top: -1.3em;
-    margin-bottom: -4em;
+    margin-top: -1.5em;
+    margin-bottom: -10em;
 
     path {
         fill: $pri-colour;
@@ -132,7 +124,7 @@ html {
     }
 
     .container {
-        margin: 6em 0;
+        margin: 5.5em 0;
 
         .logo {
             display: none;
@@ -199,25 +191,24 @@ html {
         text-align: center;
     }
 
-    .top,
-    .bottom {
+    .wrapper{
+        margin-top: 3em;
         padding: 0 $padding;
-    }
-
-    .bottom {
+        display: grid;
+        // grid-template-columns: auto auto;
+        // grid-template-rows: auto auto;
+        grid-template-columns:repeat(auto-fit, minmax(589px, 1fr));
+        grid-gap: 1em;
+        align-items: center;
         span {
             font-weight: bold;
-        }
-
-        p {
-            margin: 2em 0 3em;
         }
     }
 }
 
 .forms {
     background-color: $light-blue;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
 
     .wave {
         path {
@@ -226,8 +217,7 @@ html {
     }
 
     header {
-        margin-bottom: 5em;
-        margin-top: -3em;
+        margin-top: -10em;
         text-align: right;
         padding: 0 $padding;
     }
@@ -244,7 +234,7 @@ html {
         padding: 0 $padding;
         list-style-type: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
         grid-gap: 1em;
     }
 
@@ -285,6 +275,7 @@ html {
             height: 7em;
             width: 7em;
             margin: auto;
+            padding: 0.7em
         }
 
         &:hover {
@@ -325,7 +316,7 @@ html {
     }
 
     .header {
-        margin-top: 4em;
+        margin-top: 5em;
     }
 
     li {
@@ -360,6 +351,14 @@ html {
         font-size: 16px;
     }
 
+    // .about p{
+    //     padding: 0 $padding + 5%;
+    // }
+
+    .about .wrapper {
+        grid-auto-flow: dense;
+    }
+
     .forms ul {
         p {
             font-size: 2.2rem;
@@ -390,7 +389,7 @@ html {
 
     .forms header{
         text-align: left;
-        margin: 4em 0 3em;
+        margin: 6em 0 3em;
 
         h3::before {
             left: 0;
@@ -398,21 +397,20 @@ html {
     }
 
     .forms ul {
-        grid-gap: 2em;
+        padding: 0 $padding;
+        grid-gap: 3em;
     }
 
     .forms ul li {
-        margin: 0em;
-
         a {
-            grid-template-columns: auto;
-            grid-template-rows: 10em auto;
-    
+            grid-template-columns: 10em auto;
+            
             p{
-                margin-bottom: 1em;
+                margin-right: 0.25em;
             }
-    
+
             img {
+                padding: 1em;
                 width: 7.5em;
                 height: 7.5em;
             }
@@ -438,10 +436,48 @@ html {
 @media only screen and (min-width: 1450px) {
 
     html, body {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .hero .container .cta h1{
-        color: black;
+    #about{
+        text-align: left;
+    }
+
+    #contact{
+        text-align: right;
+    }
+
+    .forms ul {
+        p {
+            font-size: 1.9rem;
+        }
+    }
+
+    .forms ul {
+        padding: 0 $padding + 5%;
+        row-gap: 3em;
+        column-gap: 6em;
+    }
+
+    .forms ul li {
+        margin: 0em;
+
+        a {
+            grid-template-columns: auto;
+            grid-template-rows: 16em auto;
+    
+            p{
+                margin-bottom: 1em;
+            }
+    
+            img {
+                width: 13em;
+                height: 13em;
+            }
+        }
+    }
+
+    .note .header{
+        margin-top: -12em;
     }
 }

@@ -4,7 +4,7 @@ body {
   font-family: 'Raleway';
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -53,7 +53,7 @@ h3::before {
   background: #E6C5A9;
   top: 2.1em;
   z-index: -1;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 a {
@@ -70,8 +70,8 @@ html {
           filter: drop-shadow(0 5px 2px rgba(12, 10, 37, 0.2)) drop-shadow(0 10px 5px rgba(22, 18, 78, 0.13));
   width: 100%;
   overflow: hidden;
-  margin-top: -1.3em;
-  margin-bottom: -4em;
+  margin-top: -1.5em;
+  margin-bottom: -10em;
 }
 
 .wave path {
@@ -137,7 +137,7 @@ html {
 }
 
 .hero .container {
-  margin: 6em 0;
+  margin: 5.5em 0;
 }
 
 .hero .container .logo {
@@ -207,22 +207,26 @@ html {
   text-align: center;
 }
 
-.about .top,
-.about .bottom {
+.about .wrapper {
+  margin-top: 3em;
   padding: 0 8%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(589px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(589px, 1fr));
+  grid-gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about .bottom span {
+.about .wrapper span {
   font-weight: bold;
-}
-
-.about .bottom p {
-  margin: 2em 0 3em;
 }
 
 .forms {
   background-color: #D2DFF0;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
 }
 
 .forms .wave path {
@@ -230,8 +234,7 @@ html {
 }
 
 .forms header {
-  margin-bottom: 5em;
-  margin-top: -3em;
+  margin-top: -10em;
   text-align: right;
   padding: 0 8%;
 }
@@ -249,8 +252,8 @@ html {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(340px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   grid-gap: 1em;
 }
 
@@ -298,6 +301,7 @@ html {
   height: 7em;
   width: 7em;
   margin: auto;
+  padding: 0.7em;
 }
 
 .forms li:hover {
@@ -335,7 +339,7 @@ html {
 }
 
 .note .header {
-  margin-top: 4em;
+  margin-top: 5em;
 }
 
 .note li {
@@ -362,6 +366,9 @@ html {
 @media only screen and (min-width: 1080px) {
   html, body {
     font-size: 16px;
+  }
+  .about .wrapper {
+    grid-auto-flow: dense;
   }
   .forms ul p {
     font-size: 2.2rem;
@@ -393,27 +400,24 @@ html {
   }
   .forms header {
     text-align: left;
-    margin: 4em 0 3em;
+    margin: 6em 0 3em;
   }
   .forms header h3::before {
     left: 0;
   }
   .forms ul {
-    grid-gap: 2em;
-  }
-  .forms ul li {
-    margin: 0em;
+    padding: 0 8%;
+    grid-gap: 3em;
   }
   .forms ul li a {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: 10em auto;
-        grid-template-rows: 10em auto;
+    -ms-grid-columns: 10em auto;
+        grid-template-columns: 10em auto;
   }
   .forms ul li a p {
-    margin-bottom: 1em;
+    margin-right: 0.25em;
   }
   .forms ul li a img {
+    padding: 1em;
     width: 7.5em;
     height: 7.5em;
   }
@@ -430,10 +434,41 @@ html {
 
 @media only screen and (min-width: 1450px) {
   html, body {
-    font-size: 20px;
+    font-size: 18px;
   }
-  .hero .container .cta h1 {
-    color: black;
+  #about {
+    text-align: left;
+  }
+  #contact {
+    text-align: right;
+  }
+  .forms ul p {
+    font-size: 1.9rem;
+  }
+  .forms ul {
+    padding: 0 13%;
+    row-gap: 3em;
+    -webkit-column-gap: 6em;
+            column-gap: 6em;
+  }
+  .forms ul li {
+    margin: 0em;
+  }
+  .forms ul li a {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 16em auto;
+        grid-template-rows: 16em auto;
+  }
+  .forms ul li a p {
+    margin-bottom: 1em;
+  }
+  .forms ul li a img {
+    width: 13em;
+    height: 13em;
+  }
+  .note .header {
+    margin-top: -12em;
   }
 }
 /*# sourceMappingURL=index.css.map */
