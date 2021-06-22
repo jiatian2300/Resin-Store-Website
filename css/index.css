@@ -141,7 +141,7 @@ html {
 }
 
 .hero .container {
-  margin: 6em 0;
+  margin: 5em 0 6em;
 }
 
 .hero .container .logo {
@@ -188,7 +188,7 @@ html {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
   content: "\f291";
-  margin-right: 0.7rem;
+  margin-right: 1rem;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
 }
@@ -328,7 +328,7 @@ html {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  font-family: "Playfair";
+  font-family: "Playfair Display";
   font-size: 1.9rem;
   font-weight: bold;
   color: #6d87a8;
@@ -395,7 +395,7 @@ html {
 .note strong {
   display: block;
   margin: 1em 0;
-  font-family: "Playfair";
+  font-family: "Playfair Display";
   font-size: 1.5rem;
   color: #475e7b;
 }
@@ -469,7 +469,7 @@ html {
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     grid-area: img_1;
-    margin-top: -30%;
+    margin-top: -5%;
     width: 100%;
     z-index: 1;
   }
@@ -479,7 +479,7 @@ html {
     -ms-grid-column: 1;
     grid-area: img_2;
     left: 0;
-    margin-top: -65%;
+    margin-top: -70%;
     width: 100%;
     z-index: 1;
   }

@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  //overflow: hidden;
 
   ::selection {
     background: $sec-colour;
@@ -129,7 +130,7 @@ html {
   }
 
   .container {
-    margin: 6em 0;
+    margin: 5em 0 6em;
 
     .logo {
       display: none;
@@ -168,7 +169,7 @@ html {
         font-family: "Font Awesome 5 Free";
         font-weight: 700;
         content: "\f291";
-        margin-right: 0.7rem;
+        margin-right: 1rem;
         transition: color 300ms ease-in-out;
       }
 
@@ -298,7 +299,7 @@ html {
       text-align: center;
       align-self: center;
       justify-self: center;
-      font-family: "Playfair";
+      font-family: "Playfair Display";
       font-size: 1.9rem;
       font-weight: bold;
       color: $pri-colour;
@@ -365,7 +366,7 @@ html {
   strong {
     display: block;
     margin: 1em 0;
-    font-family: "Playfair";
+    font-family: "Playfair Display";
     font-size: 1.5rem;
     color: $header-blue;
   }
@@ -437,7 +438,7 @@ html {
 
       .img_1 {
         grid-area: img_1;
-        margin-top: -30%;
+        margin-top: -5%;
         width: 100%;
         z-index: 1;
       }
@@ -445,7 +446,7 @@ html {
       .img_2 {
         grid-area: img_2;
         left: 0;
-        margin-top: -65%;
+        margin-top: -70%;
         width: 100%;
         z-index: 1;
       }
